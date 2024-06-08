@@ -1,0 +1,26 @@
+ Week 15 Assignment
+Task 1
+Imported netflix_titles csv file successfully. No difficulties experienced during the import.
+The interesting thing about the chosen dataset is how easy to view using a single query;
+ SELECT * FROM world.netflix_titles;
+
+Task 2
+Below are simple queries that I used to play with the dataset
+
+SELECT * FROM world.netflix_titles WHERE country IN ('United States');
+SELECT * FROM world.netflix_titles WHERE date_added BETWEEN 'September 10, 2021' AND 'September 15, 2021';
+SELECT MAX(duration) AS highest_duration FROM world.netflix_titles; 
+UPDATE world.netflix_titles SET show_id = s1 WHERE country = 'Kenya';
+DELETE FROM world.netflix_titles WHERE country = 'South Africa';
+INSERT INTO world.netflix_titles (show_id, type, title, director, cast, country, date_added, release_year, rating, duration, listed_in, description) VALUES ('s102', 'Movie', 'Zakayo Shuka', 'Joseph Musuma' 'Amanda alice, Kevin Debruine, William Ruto, David Festo...', 'Kenya', 'June 8, 2024', 2024, 'PG', '5 seasons', 'Action Movies', 'Joseph Musuma, the starring mercenary saves his country from a rogue government...');
+
+The hidden fact about the data is that all the shows were added in September 2021. In addition, most of them were casted in the United States.
+
+SELECT COUNT(*) FROM world.netflix_titles WHERE rating = 'PG';
+SELECT AVG(duration) FROM world.netflix_titles;
+SELECT SUM(duration) FROM world.netflix_titles WHERE duration > '1 Season';
+
+Task 3
+Retrieve all movies added after September 15, 2021?
+SELECT * FROM world.netflix_titles WHERE type = 'Movie' AND date_added > 'September 15, 2021' ORDER BY date_added;
+
