@@ -21,6 +21,7 @@ There are a total of 106 seasons represented across all shows in the dataset.
 Task 3
 Retrieve all movies added after September 15, 2021?
 SELECT * FROM world.netflix_titles WHERE type = 'Movie' AND date_added > 'September 15, 2021' ORDER BY date_added;
+What is the average duration of shows in the dataset? 100.72 minutes
 
 Task 4
 Filtered the data using the following SQL queries then generated bar charts on Microsoft Excel, find the bar charts on a parallel file in this repository.
