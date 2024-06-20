@@ -1,4 +1,4 @@
- Week 15 Assignment
+ Week 15 & 16 Assignment
 Task 1
 Imported netflix_titles csv file successfully. No difficulties experienced during the import.
 The interesting thing about the chosen dataset is how easy to view using a single query;
@@ -8,6 +8,7 @@ Task 2
 Below are simple queries that I used to play with the dataset
 
 SELECT * FROM world.netflix_titles WHERE country IN ('United States');
+SELECT DISTINCT country FROM world.netflix_titles;
 SELECT * FROM world.netflix_titles WHERE date_added BETWEEN 'September 10, 2021' AND 'September 15, 2021';
 SELECT MAX(duration) AS highest_duration FROM world.netflix_titles; 
 UPDATE world.netflix_titles SET show_id = s1 WHERE country = 'Kenya';
@@ -23,4 +24,11 @@ SELECT SUM(duration) FROM world.netflix_titles WHERE duration > '1 Season';
 Task 3
 Retrieve all movies added after September 15, 2021?
 SELECT * FROM world.netflix_titles WHERE type = 'Movie' AND date_added > 'September 15, 2021' ORDER BY date_added;
+
+Task 4
+Filtered the data using the following SQL queries then generated bar charts on Microsoft Excel, find the bar charts on a parallel file in this repository.
+
+SELECT country, COUNT(*) AS show_count FROM world.netflix_titles GROUP BY country ORDER BY show_count DESC;
+SELECT listed_in, COUNT(*) as genre_count FROM world.netflix_titles GROUP BY listed_in ORDER BY genre_count DESC;
+SELECT rating, COUNT(*) AS show_count FROM world.netflix_titles GROUP BY rating ORDER BY show_count DESC;
 
