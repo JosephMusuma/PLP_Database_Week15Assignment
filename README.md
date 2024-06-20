@@ -1,23 +1,5 @@
-#Week 15 Database Assignment by Power Learn Project
+# Analyzing Netflix Shows Dataset
+In this repo, find the SQL queries, charts and documentation for analyzing the Netflix Shows dataset using MySQL Workbench.
 
-The Mission:
+__Dataset:__ https://drive.google.com/file/d/1Cth8F5M7smd4uqE7QNX6vHBSOdK_eank/view?usp=sharing
 
-1. Data Dive (10 pts):
-
-Pick your dataset and click to download (Social Media Users, Netflix Shows, or Human Stampedes).
-Import it into MySQL Workbench (learn how!). 
-Briefly explain any difficulties and 1 interesting thing you noticed about your chosen dataset.
-
-
-2. Data Fun (20 pts):
-
-Use simple SQL queries to play with the data.
-Find 2 cool facts hidden within the data (e.g., most popular interests).
-Use basic SQL queries like (COUNT, AVG, and SUM) to understand more about the data you have.
-
-
-3. Ask Away (30 pts):
-
-Formulate 2 questions about the data (e.g., what are popular shows in different countries?).
-Write basic SQL queries (WHERE, ORDER BY) to find answers.
-Share what you learned from the answers.
